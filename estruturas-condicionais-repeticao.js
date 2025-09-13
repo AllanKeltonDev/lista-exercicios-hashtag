@@ -31,4 +31,21 @@ const calcularVendas = (dia = 1) => { // Função recursiva para calcular as ven
   }); // Pergunta ao usuário o número de hambúrgueres vendidos no dia atual e chama a função novamente para o próximo dia
 };
 
-calcularVendas(); // Inicia o processo de cálculo das vendas diárias
+calcularVendas(); // Inicia o processo de cálculo das vendas diárias     
+
+
+//Outra solução:
+
+let totalVendas = 0;
+let diasSemana = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
+let vendasPorDia = [40, 55, 30, 25, 60, 80, 20]; // Exemplo de vendas por dia
+
+for (let dia of diasSemana) {
+  totalVendasDia = precoHamburguer * vendasPorDia[diasSemana.indexOf(dia)];
+  totalVendas += totalVendasDia;
+  console.log(`Vendas em ${dia}: R$${totalVendasDia}`);
+}
+
+console.log(`Total de vendas na semana: R$${totalVendas}`);
+
+
