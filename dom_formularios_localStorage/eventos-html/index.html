@@ -11,7 +11,7 @@
   <body>
     <h2>Eventos em elementos HTML</h2>
 
-    <p onmouseover="onMouseOver()">
+    <p onmouseover="onMouseOver()" onmouseout="onMouseOut()" >
       Passe o mouse aqui para mudar a cor do texto.
     </p>
 
@@ -24,7 +24,7 @@
       onblur="handleBlur(this)"
     />
 
-    <img onmouseover="trocaImagem()" id="imagem" src="./img/imagem1.png" alt="Imagem misteriosa" />
+    <img onmouseover="trocaImagem()" onmouseout="voltaImagem()" id="imagem" src="./img/imagem1.png" alt="Imagem misteriosa" />
 
     <script src="script.js"></script>
   </body>
