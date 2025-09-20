@@ -6,10 +6,12 @@ Exemplo Entrada: // calcularPontos(5, 2);
 Exemplo Saída: // 17
 */
 function calcularPontos(vitorias, empates) {
-  const pontos = (vitorias * 3) + (empates * 1);
+  const pontos = vitorias * 3 + empates * 1;
   const pontosVitoria = vitorias * 3;
   const pontosEmpate = empates * 1;
-  return console.log(`O time teve ${vitorias} vitórias e ${empates} empates, totalizando ${pontos} pontos. Sendo ${pontosVitoria} pontos de vitórias e ${pontosEmpate} pontos de empate. `);
+  return console.log(
+    `O time teve ${vitorias} vitórias e ${empates} empates, totalizando ${pontos} pontos. Sendo ${pontosVitoria} pontos de vitórias e ${pontosEmpate} pontos de empate. `,
+  );
 }
 
 calcularPontos(5, 2);

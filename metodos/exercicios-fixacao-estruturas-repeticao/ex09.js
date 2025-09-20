@@ -7,7 +7,8 @@ Exemplo Saída: // 25 */
 function calcularMedia(numeros) {
   let soma = 0; // Inicializando a soma dos números
 
-  for (let i = 0; i < numeros.length; i++) { // Percorrendo cada número no array
+  for (let i = 0; i < numeros.length; i++) {
+    // Percorrendo cada número no array
     soma += numeros[i]; // Somando o número atual à soma total
   } // Fim do loop
   let media = soma / numeros.length; // Calculando a média dividindo a soma pelo número de elementos

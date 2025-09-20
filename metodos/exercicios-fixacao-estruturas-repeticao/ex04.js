@@ -5,12 +5,11 @@ Exemplo Entrada: //calcularRendimento(1000, 5);
 Exemplo Saída: // 50
 */
 
-
 function calcularRendimento(valorInvestido, taxaJuros) {
-
   const rendimento = (valorInvestido * taxaJuros) / 100;
-  return console.log(`Seu Rendimento sobre o valor de R$${valorInvestido.toFixed(2)}, a uma taxa de juros de ${taxaJuros}% é R$${rendimento.toFixed(2)}`);
-
+  return console.log(
+    `Seu Rendimento sobre o valor de R$${valorInvestido.toFixed(2)}, a uma taxa de juros de ${taxaJuros}% é R$${rendimento.toFixed(2)}`,
+  );
 }
 
 calcularRendimento(1000, 5);

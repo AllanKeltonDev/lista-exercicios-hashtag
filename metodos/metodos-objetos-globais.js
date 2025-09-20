@@ -6,7 +6,7 @@ Exemplo Saída: // Arredondado para baixo: 7
 Arredondado para cima: 8
 Arredondado para o valor mais próximo: 8*/
 
-console.log("Exercício 1:");
+console.log('Exercício 1:');
 
 let numeroDecimal = 7.89;
 
@@ -16,7 +16,9 @@ let arredondarParaMaisProximo = Math.round(numeroDecimal);
 
 console.log(`Arredondado para baixo: ${arredondarParaBaixo}`);
 console.log(`Arredondado para cima: ${arredondarParaCima}`);
-console.log(`Arredondado para o inteiro mais próximo: ${arredondarParaMaisProximo}`);
+console.log(
+  `Arredondado para o inteiro mais próximo: ${arredondarParaMaisProximo}`,
+);
 
 /*Exercício 2: Crie uma função que receba uma lista de números e retorne o valor máximo e o
 valor mínimo dessa lista.
@@ -24,8 +26,8 @@ Exemplo Entrada: // 10, 5, 20, 40, 1, 7
 Exemplo Saída: // Valor mínimo: 1
 Valor máximo: 40*/
 
-console.log("")
-console.log("\nExercício 2:");
+console.log('');
+console.log('\nExercício 2:');
 
 let listaNumeros = [10, 5, 20, 40, 1, 7];
 
@@ -43,8 +45,8 @@ Exemplo Saída: // Aleatório entre 0 e 1: 0.8629821531529918
 Aleatório entre 0 e 100: 42.48780566605361
 Aleatório entre 50 e 100: 63.70589822740784*/
 
-console.log("")
-console.log("\nExercício 3:");
+console.log('');
+console.log('\nExercício 3:');
 
 let aleatorioEntre0e1 = Math.random();
 let aleatorioEntre0e100 = Math.random() * 100;
@@ -66,8 +68,8 @@ Exiba o resultado no console.
 Exemplo Entrada: // 2024-01-01, 2024-10-07
 Exemplo Saída: // Diferença em dias entre 2024-01-01 e 2024-10-07: 280 dias*/
 
-console.log("")
-console.log("\nExercício 4:");  
+console.log('');
+console.log('\nExercício 4:');
 
 function diferencaEmDias(data1, data2) {
   const umDiaEmMilissegundos = 1000 * 60 * 60 * 24;
@@ -75,20 +77,22 @@ function diferencaEmDias(data1, data2) {
   return Math.floor(diferencaEmMilissegundos / umDiaEmMilissegundos);
 }
 
-let dataInicio = new Date("2024-01-01");
-let dataFim = new Date("2024-10-07");
+let dataInicio = new Date('2024-01-01');
+let dataFim = new Date('2024-10-07');
 
 let diasDeDiferenca = diferencaEmDias(dataInicio, dataFim);
 
-console.log(`Diferença em dias entre ${dataInicio.toISOString().split('T')[0]} e ${dataFim.toISOString().split('T')[0]}: ${diasDeDiferenca} dias`);
+console.log(
+  `Diferença em dias entre ${dataInicio.toISOString().split('T')[0]} e ${dataFim.toISOString().split('T')[0]}: ${diasDeDiferenca} dias`,
+);
 
 /*Exercício 5: Crie uma função que receba uma data e extraia o ano, mês e dia dessa data.
 Exiba as informações no console.
 Exemplo Entrada: // 2024-10-07
 Exemplo Saída: // Ano: 2024, Mês: 10, Dia: 6*/
 
-console.log("")
-console.log("\nExercício 5:");
+console.log('');
+console.log('\nExercício 5:');
 
 function extrairData(data) {
   const ano = data.getFullYear();
@@ -97,7 +101,7 @@ function extrairData(data) {
   return { ano, mes, dia };
 }
 
-let dataExemplo = new Date("2024-10-07T00:00:00");
+let dataExemplo = new Date('2024-10-07T00:00:00');
 let { ano, mes, dia } = extrairData(dataExemplo);
 
 console.log(`Ano: ${ano}, Mês: ${mes}, Dia: ${dia}`);
@@ -107,8 +111,8 @@ idade com base na data atual. Exiba a idade no console.
 Exemplo Entrada: // 1990-05-15
 Exemplo Saída: // Idade: 34 anos*/
 
-console.log("")
-console.log("\nExercício 6:");
+console.log('');
+console.log('\nExercício 6:');
 
 function calcularIdade(dataNascimento) {
   const dataAtual = new Date();
@@ -118,13 +122,16 @@ function calcularIdade(dataNascimento) {
   const mesNascimento = dataNascimento.getMonth();
   const diaNascimento = dataNascimento.getDate();
 
-  if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+  if (
+    mesAtual < mesNascimento ||
+    (mesAtual === mesNascimento && diaAtual < diaNascimento)
+  ) {
     idade--;
   }
   return idade;
 }
 
-let dataNascimentoExemplo = new Date("1990-11-15");
+let dataNascimentoExemplo = new Date('1990-11-15');
 let idade = calcularIdade(dataNascimentoExemplo);
 
 console.log(`Idade: ${idade} anos`);
@@ -134,8 +141,8 @@ Exiba o resultado no console.
 Exemplo Entrada: // 2024-10-07
 Exemplo Saída: // Data formatada no padrão brasileiro: 07/10/2024*/
 
-console.log("")
-console.log("\nDesafio:");
+console.log('');
+console.log('\nDesafio:');
 
 function formatarDataParaPadraoBrasileiro(data) {
   const dia = String(data.getDate()).padStart(2, '0');
@@ -148,8 +155,3 @@ let dataParaFormatar = new Date();
 let dataFormatada = formatarDataParaPadraoBrasileiro(dataParaFormatar);
 
 console.log(`Data formatada no padrão brasileiro: ${dataFormatada}`);
-
-
-
-
-

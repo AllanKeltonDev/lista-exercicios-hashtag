@@ -6,6 +6,6 @@
 function soma(a, b) {
   total = a + b;
   return console.log(total);
-  }
-  
-  soma(8, 4)
+}
+
+soma(8, 4);
