@@ -30,4 +30,4 @@ console.log(`Total da Venda: R$${Vendas.calcularTotal().toFixed(2)}`); // Mostra
 Vendas.produto = 'Notebook';
 Vendas.quantidade = 2;
 Vendas.precoUnitario = 2500.0;
-Vendas.desconto = 0.1; // 10% de
+Vendas.desconto = 0.1; // 10% de desconto
