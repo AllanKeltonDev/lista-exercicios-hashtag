@@ -9,7 +9,7 @@ body {
   background: #15584c;
   padding: 2rem;
   border: #ffff 0.4rem solid;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .header {
@@ -18,7 +18,7 @@ body {
   text-align: center;
   background: #fff;
   color: #15584c;
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 2rem;
 }
 .taskBar {
@@ -33,6 +33,7 @@ h1 {
   font-weight: bold;
   width: 100%;
   display: inline-block;
+  padding: 0 0 2rem 0;
 }
 
 #taskInput {
@@ -51,7 +52,7 @@ h1 {
 .taskButton {
   width: 10rem;
   height: 3.4rem;
-  border-radius: 1.1rem;
+  border-radius: 3rem;
   border: none;
   background: #15584c;
   color: #fff;
@@ -65,16 +66,16 @@ h1 {
 
 li {
   list-style: none;
-  background: #95cdc3;
+  background: #dff5f1;
   color: #0c5548;
   padding: 1rem 1.2rem;
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
   font-size: 1.6rem;
   border-bottom: 1px solid #ccc;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
+  justify-content: space-between;
+  border-radius: 3rem;
 }
 
 .checkboxTask {
@@ -91,19 +92,25 @@ li {
   color: #48504e;
 }
 
+.checkboxTask:hover + p.taskText {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+  text-decoration-color: #48504e;
+  color: #48504e;
+}
 p.taskText {
   padding-left: 3rem;
   font-size: 1.8rem;
 }
 
 .removeButton {
-  background: #c94e4e;
-  border-radius: 1rem;
+  background: #7b8d82;
+  border-radius: 3rem;
   padding: 0.8rem 1.6rem;
   font-size: 1.4rem;
   border: none;
   margin-left: 4rem;
 }
 .removeButton:hover {
-  background: #a83232;
+  background: #e08080;
 }

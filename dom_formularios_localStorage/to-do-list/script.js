@@ -1,9 +1,10 @@
+const input = document.getElementById('taskInput'); // Seleciona o input
+
 function addTask() {
   // Função para adicionar tarefa
   const ul = document.getElementById('taskList'); // Seleciona a lista não ordenada
   const li = document.createElement('li'); // Cria um item de lista
   li.className = 'taskText'; // Adiciona uma classe ao item da lista
-  const input = document.getElementById('taskInput'); // Seleciona o input
   const paragraph = document.createElement('p'); // Cria um parágrafo
   paragraph.className = 'taskText'; // Adiciona uma classe ao parágrafo
 
@@ -40,3 +41,11 @@ function removeTask(button) {
   const ul = li.parentNode; // Seleciona a lista não ordenada pai do item da lista
   ul.removeChild(li); // Remove o item da lista da lista não ordenada
 }
+
+input.addEventListener('keypress', function (event) {
+  // Adiciona um evento de tecla pressionada ao input
+  if (event.key === 'Enter') {
+    // Verifica se a tecla pressionada é Enter
+    addTask(); // Chama a função addTask
+  }
+});
